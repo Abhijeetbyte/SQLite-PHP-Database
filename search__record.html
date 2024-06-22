@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>View Record</title>
+
     <style>
         body {
             display: flex;
@@ -13,9 +14,15 @@
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
         .container {
             text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         form {
             margin-top: 20px;
@@ -24,14 +31,19 @@
             padding: 10px;
             margin: 5px;
             width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
         input[type="submit"] {
-            padding: 10px 20px;
-            margin: 5px;
+            padding: 15px 30px;
+            margin: 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
         }
         input[type="submit"]:hover {
             background-color: #45a049;
@@ -41,9 +53,9 @@
 <body>
     <div class="container">
         <h1>View Record</h1>
-        <form action="view_record.php" method="get">
+        <form action="search_record.php" method="post">
             <input type="text" name="roll_number" placeholder="Roll Number" required>
-            <input type="submit" value="View">
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
