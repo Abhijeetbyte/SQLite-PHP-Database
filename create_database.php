@@ -9,9 +9,10 @@ try {
     // Create the students table if it doesn't exist
     $query = "CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
-        roll_number TEXT UNIQUE,
+        roll_number TEXT NOT NULL,
         name TEXT,
-        date TEXT
+        date TEXT NOT NULL,
+        UNIQUE (roll_number, date)
     )";
     $db->exec($query);
 
