@@ -1,4 +1,4 @@
-# Simple-SQLite-database
+# PHP-SQLite-Database
 
 
 A simple example of a website with a backend using SQLite and PHP that you can host anywhere, without any additional setup. This example PHP script uses SQLite for a single-page website with a student attendance form. There are two pages: one for submitting attendance and one for viewing the attendance data based on the student's roll number.
