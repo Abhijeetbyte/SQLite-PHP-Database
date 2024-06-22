@@ -1,5 +1,6 @@
 # Simple-SQLite-database
 
+
 A simple example of a website with a backend using SQLite and PHP that you can host anywhere, without any additional setup. This example PHP script uses SQLite for a single-page website with a student attendance form. There are two pages: one for submitting attendance and one for viewing the attendance data based on the student's roll number.
 
 ## Getting started
@@ -38,6 +39,8 @@ Navigate to `view_attendance.html` in your browser and use the form to input a r
 ## Notes
 
 - Ensure your web server has write permissions to create and modify the `students.db` SQLite file.
-- The database file `students.db` will be created in the same directory as the PHP scripts.
+- The database file `students.db` will be created in the directory specified in the PHP scripts.
+- Implement security measures like restricting access to the database file using `.htaccess` for Apache or appropriate configurations for other web servers.
+- Set correct file permissions for the SQLite database file (e.g., `chmod 600` on Unix-based systems).
 
-
+  
