@@ -6,7 +6,7 @@ try {
     }
 
     // Connect to the SQLite database
-    $db = new PDO('sqlite:students.db');
+    $db = new PDO('sqlite:records.db');
 
     // Set error mode to exceptions
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
