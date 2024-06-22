@@ -1,0 +1,4 @@
+# Deny access to SQLite database file
+<Files "students.db">
+    Require all denied
+</Files>
