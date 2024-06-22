@@ -5,9 +5,9 @@ A simple example of a website with a backend using SQLite and PHP that you can h
 
 ## Getting started
 
-Download this repository and extract the zip file.
+**Download this repository and extract the zip file.** ⬇
 
-Upload all the files into your hosting server.
+**Upload all the files into your hosting server.** 🚀
 
 ## Files
 
