@@ -12,7 +12,7 @@ The example website is a basic student attendance system with essential features
 
 ## Files
 
-1. **create_database.php**: Run this script once to create the SQLite database and table.
+1. **create_database.php**: Run this script once to create the SQLite database and table ( database schema ).
 2. **index.html**: HTML form for submitting attendance.
 3. **add_record.php**: PHP script to save attendance data to the SQLite database.
 4. **search_record.html**: HTML form to input a roll number to view attendance data.
