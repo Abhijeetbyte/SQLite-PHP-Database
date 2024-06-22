@@ -1,4 +1,4 @@
-# PHP-SQLite-Database
+# SQLite-PHP-Database
 
 A **simple** example of a website with a backend using SQLite and PHP that you can host **anywhere** without any **additional setup**.
 
