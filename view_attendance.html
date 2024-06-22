@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Student Attendance</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>View Student Attendance</h1>
+        <form action="view_attendance.php" method="get">
+            <label for="roll_no">Roll No:</label><br>
+            <input type="text" id="roll_no" name="roll_no" required><br><br>
+            <input type="submit" value="View Attendance">
+        </form>
+    </div>
+</body>
+</html>
