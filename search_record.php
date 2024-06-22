@@ -32,15 +32,21 @@
     <h1>Records Table</h1>
 
     <?php
-    try {
-        // Connect to SQLite database
-        $db = new PDO('sqlite:records.db');
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Initialize variables for input data
+    $roll_number = '';
+    $error_message = '';
 
-        // Check if POST data is received
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST['roll_number']) && !empty($_POST['roll_number'])) {
-                $roll_number = htmlspecialchars($_POST['roll_number']);
+    // Check if POST data is received
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Sanitize user input
+        $roll_number = filter_input(INPUT_POST, 'roll_number', FILTER_SANITIZE_STRING);
+
+        // Validate roll_number
+        if (!empty($roll_number)) {
+            try {
+                // Connect to SQLite database
+                $db = new PDO('sqlite:records.db');
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 // Prepare SQL query to fetch records
                 $stmt = $db->prepare('SELECT * FROM students WHERE roll_number = :roll_number');
@@ -63,14 +69,19 @@
                 } else {
                     echo '<p>No records found for roll number ' . htmlspecialchars($roll_number) . '</p>';
                 }
-            } else {
-                echo '<p>Please enter a roll number to view records.</p>';
+            } catch (PDOException $e) {
+                echo '<p>Database connection error: ' . $e->getMessage() . '</p>';
             }
         } else {
-            echo '<p>Access denied.</p>';
+            $error_message = 'Please enter a roll number to view records.';
         }
-    } catch (PDOException $e) {
-        echo '<p>Database connection error: ' . $e->getMessage() . '</p>';
+    } else {
+        $error_message = 'Access denied.';
+    }
+
+    // Display error message if any
+    if (!empty($error_message)) {
+        echo '<p>' . htmlspecialchars($error_message) . '</p>';
     }
     ?>
 
