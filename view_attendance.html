@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>View Student Attendance</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Record</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
         }
         .container {
             text-align: center;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>View Student Attendance</h1>
-        <form action="view_attendance.php" method="get">
-            <label for="roll_no">Roll No:</label><br>
-            <input type="text" id="roll_no" name="roll_no" required><br><br>
-            <input type="submit" value="View Attendance">
+        <h1>View Record</h1>
+        <form action="view_record.php" method="get">
+            <input type="text" name="roll_number" placeholder="Roll Number" required>
+            <input type="submit" value="View">
         </form>
     </div>
 </body>
