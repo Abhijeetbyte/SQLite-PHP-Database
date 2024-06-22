@@ -22,7 +22,7 @@ You can host these files on a web server that supports PHP. Ensure the server ha
 
 ### Step 1: Create the Database
 
-Run `create_database.php` once to create the SQLite database and table. You can do this by navigating to `create_database.php` in your browser:
+Run `create_database.php` once to create the SQLite database and table. You can do this by navigating to `create_database.php` in your browser: 
 `http://yourdomain.com/create_database.php`
 
 ### Step 2: Submit Attendance
@@ -31,9 +31,8 @@ Navigate to `index.html` in your browser and use the form to submit attendance: 
 
 ### Step 3: View Attendance
 
-Navigate to `view_attendance.html` in your browser and use the form to input a roll number and view the attendance data:
+Navigate to `view_attendance.html` in your browser and use the form to input a roll number and view the attendance data: `http://yourdomain.com/view_attendance.html`
 
-http://yourdomain.com/view_attendance.html
 
 
 ## Notes
