@@ -14,9 +14,9 @@ The example website is a basic student attendance system with essential features
 
 1. **create_database.php**: Run this script once to create the SQLite database and table.
 2. **index.html**: HTML form for submitting attendance.
-3. **submit_attendance.php**: PHP script to save attendance data to the SQLite database.
-4. **view_attendance.html**: HTML form to input a roll number to view attendance data.
-5. **view_attendance.php**: PHP script to retrieve and display attendance data based on the roll number.
+3. **add_record.php**: PHP script to save attendance data to the SQLite database.
+4. **search_record.html**: HTML form to input a roll number to view attendance data.
+5. **search_record.php**: PHP script to retrieve and display attendance data based on the roll number.
 6. **.htaccess**: Configuration file to restrict access to the database file.
 
 You can host these files on a web server that supports PHP. Ensure the server has write permissions to create and modify the `students.db` SQLite file.
@@ -32,11 +32,6 @@ Run `create_database.php` once to create the SQLite database and table. You can 
 ### Step 2: Submit Attendance
 
 Navigate to `index.html` in your browser and use the form to submit attendance:<br/> `http://yourdomain.com/index.html`
-
-### Step 3: View Attendance
-
-Navigate to `view_attendance.html` in your browser and use the form to input a roll number and view the attendance data: <br/>`http://yourdomain.com/view_attendance.html`
-<br/>
 
 
 ## Notes
