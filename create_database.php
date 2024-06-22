@@ -1,26 +1,25 @@
 <?php
 try {
-    // Connect to SQLite database
+    // Create (or open) the SQLite database
     $db = new PDO('sqlite:students.db');
-    
-    // Set error mode to throw exceptions
+
+    // Set error mode to exceptions
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Create table if it doesn't exist
-    $db->exec("CREATE TABLE IF NOT EXISTS Attendance (
+    // Create the students table if it doesn't exist
+    $query = "CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
-        roll_no TEXT,
-        student_name TEXT,
+        roll_number TEXT UNIQUE,
+        name TEXT,
         date TEXT
-    )");
+    )";
+    $db->exec($query);
 
-    // Success message
+    // Confirm table creation
     echo "Database and table created successfully.";
 } catch (PDOException $e) {
-    // Log error to server logs
-    error_log("Database error: " . $e->getMessage());
-
-    // Error message for users
-    echo "An error occurred. Please try again later.";
+    // Log the error message
+    error_log($e->getMessage());
+    echo "An error occurred while creating the database.";
 }
 ?>
